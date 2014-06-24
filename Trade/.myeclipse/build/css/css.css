@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+
+body{font:12px Tahoma;
+     margin:0px;/*省写，上右下左*/
+     text-align:center;/*文字对齐方式*/
+     background:#0094DD;
+     }
+#container{width:100%}/*页面层容器  #代表id .代表class*/
+
+#Header{width:98%;    /*页面头部*/
+        margin:0 auto;
+        height:100px;/*高度height/宽度width*/
+        background: #0094DD url(logo.gif) no-repeat;
+        /*background:#ccc url('bg.gif') top left no-repeat; top,right,left,bottom,right
+        20px 100px:表示X坐标为20，Y为100的精确定位
+        repeat/no-repeat/repeat-x/repeat-y按不同方向填充*/
+        }
+        
+#PageBody{width:98%;  /*页面主体*/
+          margin:8px auto;/*上下边距为8，auto表示左右自动居中；margin外部距离，padding内部距离*/
+          height:500px;
+          background:#0094DD;
+          }
+
+#Sidebar{
+	    margin:0px;
+	    width:260px; /*设定宽度*/
+	    height:500px;  
+	    text-align:left; /*文字左对齐*/ 
+	    float:right; /*浮动居左*/  
+	    clear:left; /*不允许左侧存在浮动*/ 
+	    overflow:hidden; /*超出宽度部分隐藏*/ 
+	    background:#0094DD;
+	    }  
+
+#MainBody{
+	      margin:0px;
+	      width:2000px;
+	      height:500px;
+          text-align:left;  
+          float:left; /*浮动居右*/  
+          clear:right; /*不允许右侧存在浮动*/ 
+          overflow:hidden;
+          background:#0094DD;
+	      }
+
+#Footer{width:1080px;  /*页面底部*/
+          margin:0 auto;
+          height:100px;
+          background:#0094DD;
+          }
+          
+#menu{padding:20px 20px 0 0}/*固定菜单位置*/
+          
+#menu ul{float:right;list-style:none;/*取消列表前点*/
+         margin:0px;/*删除ul缩进*/
+         }
+#menu ul li{float:left;margin:40px 10px;/*让内容在同一行显示(浮于左右),左右间隔为20像素 与上边距为40像素*/ 
+            display:block;line-height:28px;}     
+#menu ul li a:link,#meun ul li a:visited{font-weight:bold;color:#666}/*修改超链接样式*/
+#menu ul li a:hover{}
+
+.menuDiv{width:1px;height:28px;background:#999}   
+
+#banner{
+        background:url(banner.jpg) 0 30px no-repeat;/*加入背景图*/
+        width:98%;/*设定层的宽度*/
+        margin:auto;/*层居中*/
+        height:240px/*设定高度*/
+        border-bottom:5px solid #EFEFEF;/*画一条浅灰色实线*/
+        clear:both;/*清除浮动*/
+        }
+        

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<!-- 在此处引入你自己的jqury库 -->
+<script src="js/jquery-1.11.1.min.js">
+</script>
+</head>
+
+<body>
+<div>
+</div>
+<form id = "searchForm">
+<input type = "text" name = "searchfor" placeholder = "请输入关键字"/> 
+<button type ="submit">提交</button><br />
+<input type = "radio" name = "method" value = "blur" checked="checked"/> 模糊查询
+<input type = "radio" name = "method" value="exact"/>精确查询
+</form>
+<div id = "result">
+<!-- 服务器返回的内容将在此处显示!服务器返回的内容中不应该再含有html和body标签.-->
+</div>
+
+<!-- 最好把脚本写到body的最下端 -->
+<script>
+//------------通过设置下面几个变量的值进行自定义.--------------
+// 查询提交地址
+var targetUrl = "test.php";
+
+// 内容id.应该把返回的内容放到哪个div中显示.
+var idOfContent = "result";
+
+// 按哪个按钮的时候,向服务器请求数据.
+var idOfSearchForm = "searchForm";
+
+// 表单数据提交方式,GET 或者 POST
+var methodOfFormSubmit = "GET";
+
+// -------------------封装的一个函数-----------------------
+// 在表单出发submit表单提交事件时,通过ajax技术向服务器请求数据.
+$("#"+idOfSearchForm).submit(function(event){
+
+	// 表单各项的数据.
+	var fields = $( this ).serializeArray();
+
+	// ajax向服务器请求数据.
+	$.ajax({
+		type:methodOfFormSubmit,
+		url: targetUrl,
+		data: fields,
+		success: function( data ){
+			$("#"+idOfContent).html( data );},
+		dataType: "html"
+		});
+	// 阻止表单默认的提交行为
+	event.preventDefault();
+  });
+</script>
+</body>
+</html>

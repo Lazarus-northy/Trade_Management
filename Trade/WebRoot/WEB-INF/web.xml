@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>userServlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>DeleteServlet</servlet-name>
+  <servlet-class>userServlet.DeleteServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <servlet-name>RegisterServlet</servlet-name>
+  <servlet-class>userServlet.registerServlet</servlet-class>
+ </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>userServlet.UpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>addcontract</servlet-name>
+    <servlet-class>Servlet.contract.addcontract</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>update_contract</servlet-name>
+    <servlet-class>Servlet.contract.update_contract</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delete_contract</servlet-name>
+    <servlet-class>Servlet.contract.delete_contract</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>addcompany</servlet-name>
+    <servlet-class>Servlet.company.addcompany</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>update_company</servlet-name>
+    <servlet-class>Servlet.company.update_company</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delete_company</servlet-name>
+    <servlet-class>Servlet.company.delete_company</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>addtidan</servlet-name>
+    <servlet-class>Servlet.time.addtidan</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>update_daogang</servlet-name>
+    <servlet-class>Servlet.time.update_daogang</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>closecontract</servlet-name>
+    <servlet-class>Servlet.time.closecontract</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>contract_jingque_find</servlet-name>
+    <servlet-class>Servlet.finder.contract_jingque_find</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>time_find</servlet-name>
+    <servlet-class>Servlet.finder.time_find</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>addcost</servlet-name>
+    <servlet-class>Servlet.cost.addcost</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delete_cost</servlet-name>
+    <servlet-class>Servlet.cost.delete_cost</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>update_cost</servlet-name>
+    <servlet-class>Servlet.cost.update_cost</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet-mapping>
+  <servlet-name>DeleteServlet</servlet-name>
+  <url-pattern>*.do</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>RegisterServlet</servlet-name>
+  <url-pattern>/RegisterServlet</url-pattern>
+ </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateServlet</servlet-name>
+    <url-pattern>/UpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addcontract</servlet-name>
+    <url-pattern>/addcontract</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>update_contract</servlet-name>
+    <url-pattern>/update_contract</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delete_contract</servlet-name>
+    <url-pattern>/delete_contract</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addcompany</servlet-name>
+    <url-pattern>/addcompany</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>update_company</servlet-name>
+    <url-pattern>/update_company</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delete_company</servlet-name>
+    <url-pattern>/delete_company</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addtidan</servlet-name>
+    <url-pattern>/addtidan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>update_daogang</servlet-name>
+    <url-pattern>/update_daogang</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>closecontract</servlet-name>
+    <url-pattern>/closecontract</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>contract_jingque_find</servlet-name>
+    <url-pattern>/contract_jingque_find</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>time_find</servlet-name>
+    <url-pattern>/time_find</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addcost</servlet-name>
+    <url-pattern>/addcost</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delete_cost</servlet-name>
+    <url-pattern>/delete_cost</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>update_cost</servlet-name>
+    <url-pattern>/update_cost</url-pattern>
+  </servlet-mapping>
+</web-app>
